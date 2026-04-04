@@ -10,7 +10,7 @@ import plistlib
 from datetime import datetime, timedelta
 from pathlib import Path
 
-CERT_DIR = Path("../certs")
+CERT_DIR = Path(__file__).parent / "certs"
 CA_CERT_PATH = CERT_DIR / "ca.crt"
 CA_KEY_PATH  = CERT_DIR / "ca.key"
 
