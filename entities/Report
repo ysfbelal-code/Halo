@@ -1,0 +1,48 @@
+{
+  "name": "Report",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "description": "Brief title of the incident"
+    },
+    "description": {
+      "type": "string",
+      "description": "Detailed description of the incident"
+    },
+    "video_url": {
+      "type": "string",
+      "description": "URL of the problematic video"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "pending",
+        "reviewing",
+        "resolved",
+        "dismissed"
+      ],
+      "default": "pending",
+      "description": "Current status of the report"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "inappropriate_content",
+        "violent_content",
+        "misleading",
+        "spam",
+        "social_engineering",
+        "risky_stunts",
+        "mature_reality",
+        "other"
+      ],
+      "description": "Category of the incident"
+    }
+  },
+  "required": [
+    "title",
+    "description",
+    "category"
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "name": "CustomFilter",
+  "type": "object",
+  "properties": {
+    "keyword": {
+      "type": "string",
+      "description": "Keyword or phrase to filter"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "brainrot",
+        "social_engineering",
+        "risky_stunts",
+        "mature_reality",
+        "custom"
+      ],
+      "default": "brainrot",
+      "description": "Category of the filter"
+    },
+    "is_active": {
+      "type": "boolean",
+      "default": true,
+      "description": "Whether this filter is currently active"
+    }
+  },
+  "required": [
+    "keyword"
+  ]
+}
